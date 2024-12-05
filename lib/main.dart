@@ -1,3 +1,4 @@
+import 'package:bootcamp_101/forms.dart';
 import 'package:flutter/material.dart';
 
 import 'podcast_details_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple,
         scaffoldBackgroundColor: const Color(0xFF1A1B2E),
       ),
-      home: const PodcastDetailsScreen(),
+      home: const FormsScreen(),
     );
   }
 }
