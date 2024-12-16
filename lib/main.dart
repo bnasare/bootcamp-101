@@ -1,8 +1,12 @@
-import 'package:bootcamp_101/forms.dart';
+import 'package:bootcamp_101/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'counter_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context) => CounterProvider(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple,
         scaffoldBackgroundColor: const Color(0xFF1A1B2E),
       ),
-      home: const FormsScreen(),
+      home: const CounterScreen(),
     );
   }
 }
