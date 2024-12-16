@@ -1,8 +1,7 @@
 import 'package:bootcamp_101/counter_provider.dart';
+import 'package:bootcamp_101/shared_preferences_into.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'counter_screen.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -19,9 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.purple,
-        scaffoldBackgroundColor: const Color(0xFF1A1B2E),
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: const CounterScreen(),
+      home: const LocalStorageDemoApp(),
     );
   }
 }
