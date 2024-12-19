@@ -1,9 +1,15 @@
 import 'package:bootcamp_101/counter_provider.dart';
+import 'package:bootcamp_101/firebase_options.dart';
 import 'package:bootcamp_101/shared_preferences_into.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(ChangeNotifierProvider(
       create: (context) => CounterProvider(), child: const MyApp()));
 }
